@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        background-color: black;
+      }
+      .body {
+        height: 600px;
+        width: 500px;
+        background-color: red;
+        border: 2px red solid;
+        text-align: center;
+        margin-bottom: 10px;
+        border-radius: 20px;
+        margin-left: 450px;
+      }
+
+      .body > h1 {
+        background-color: black;
+        padding: 40px;
+        position: relative;
+        top: 10px;
+        width: 350px;
+        left: 20px;
+        border-radius: 5px;
+        box-shadow: 0px 10px 20px white;
+        color: white;
+      }
+
+      #row > button {
+        padding: 20px;
+        margin: 4px;
+        font-size: large;
+        border-radius: 7px;
+        text-align: center;
+        background-color: black;
+        color: white;
+        border: 1px solid white;
+        width: 80px;
+        height: 80px;
+      }
+
+      #row > button:hover {
+        background-color: white;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="body">
+      <h1 id="display"></h1>
+      <div id="row">
+        <button id="ac">AC</button>
+        <button id="del">DEL</button>
+        <button id="mod">%</button>
+        <button id="div">/</button>
+        <br />
+        <button id="siven">7</button>
+        <button id="eight">8</button>
+        <button id="nine">9</button>
+        <button id="mult">*</button>
+        <br />
+        <button id="four">4</button>
+        <button id="five">5</button>
+        <button id="six">6</button>
+        <button id="minus">-</button>
+        <br />
+        <button id="one">1</button>
+        <button id="two">2</button>
+        <button id="three">3</button>
+        <button id="plus">+</button>
+        <br />
+        <button id="twozero">00</button>
+        <button id="zero">0</button>
+        <button id="dot">.</button>
+        <button id="equal">=</button>
+      </div>
+    </div>
+    <script>
+      let str = "";
+      //dispaly
+      let display = document.getElementById("display");
+      //symbol
+      document.getElementById("plus").addEventListener("click", () => {
+        str += plus.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("minus").addEventListener("click", () => {
+        str += minus.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("mod").addEventListener("click", () => {
+        str += mod.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("div").addEventListener("click", () => {
+        str += div.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("mult").addEventListener("click", () => {
+        str += mult.innerText;
+        display.innerText = str;
+      });
+      let equal = document
+        .getElementById("equal")
+        .addEventListener("click", () => {
+          display.innerText = eval(str);
+          str = "";
+        });
+      document.getElementById("dot").addEventListener("click", () => {
+        str += dot.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("ac").addEventListener("click", () => {
+        str = "";
+        display.innerText = "";
+      });
+      document.getElementById("del").addEventListener("click", () => {
+        let str1 = "";
+        for (let a = 0; a < str.length - 1; a++) str1 += str.charAt(a);
+        display.innerText = str1;
+        str = str1;
+        str1 = "";
+      });
+
+      //number
+      document.getElementById("one").addEventListener("click", () => {
+        str += one.innerText;
+        display.innerText = str;
+      });
+
+      document.getElementById("two").addEventListener("click", () => {
+        str += two.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("three").addEventListener("click", () => {
+        str += three.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("four").addEventListener("click", () => {
+        str += four.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("five").addEventListener("click", () => {
+        str += five.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("six").addEventListener("click", () => {
+        str += six.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("siven").addEventListener("click", () => {
+        str += siven.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("eight").addEventListener("click", () => {
+        str += eight.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("nine").addEventListener("click", () => {
+        str += nine.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("zero").addEventListener("click", () => {
+        str += zero.innerText;
+        display.innerText = str;
+      });
+      document.getElementById("twozero").addEventListener("click", () => {
+        str += twozero.innerText;
+        display.innerText = str;
+      });
+    </script>
+  </body>
+</html>
